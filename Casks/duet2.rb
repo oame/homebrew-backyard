@@ -1,6 +1,6 @@
 class Duet2 < Cask
   version 'January2014'
-  sha256 '71ee71e6b98a06465743ccdf341504a95b5f881fa7264044ccebdc8060a3ec25'
+  sha256 'b9711f980f336a44f70ebe93325233c1209ee04421a2bf6051223a2f0c05d8ff'
 
   url 'http://www.apogeedigital.com/drivers/DUET2/Duet_January_2014_Mavericks.dmg'
   homepage 'http://www.apogeedigital.com/'
