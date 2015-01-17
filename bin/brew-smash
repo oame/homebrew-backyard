@@ -1,0 +1,19 @@
+#!/bin/sh
+# Usage: brew smash app-name
+
+if [ -z "$1" ] ; then
+  echo "Usage: brew smash app-name"
+  exit 1
+fi
+
+if [ ! -d "Casks" ] ; then
+  KEEP_CLEAN=true
+else
+  KEEP_CLEAN=false
+fi
+
+HOMEBREW_CACHE=. brew cask fetch "$1"
+
+if [ "$KEEP_CLEAN" = true ] ; then
+  rm -r "Casks"
+fi
