@@ -15,6 +15,9 @@ class Mergepbx < Formula
     To add merger to .gitconfig:
         git config --global merge.mergepbx.name "Xcode project files merger"
         git config --global merge.mergepbx.driver "mergepbx %O %A %B"
+
+    In your repository root directory, open the file .gitattributes (create if it does not exist). Add the following lines to it:
+        *.pbxproj merge=mergepbx
     EOS
   end
 end
