@@ -10,4 +10,11 @@ class Mergepbx < Formula
     system "./build.py"
     bin.install "mergepbx"
   end
+
+  def caveats; <<-EOS.undent
+    To add merger to .gitconfig:
+        git config --global merge.mergepbx.name "Xcode project files merger"
+        git config --global merge.mergepbx.driver "mergepbx %O %A %B"
+    EOS
+  end
 end
